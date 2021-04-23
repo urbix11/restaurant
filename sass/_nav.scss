@@ -1,0 +1,157 @@
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: $primary-dark;
+    z-index: 100;
+
+    @include breakpoint(medium) {
+        background: transparent;
+    }
+
+    &__logo {
+        margin: 10px;
+
+        @include switch-icon;
+    }
+
+
+    // &__btn {
+    //     position: absolute;
+    //     top: 20px;
+    //     right: 20px;
+    //     padding: 20px;
+    //     margin-left: auto;
+    //     background: transparent;
+    //     outline: none;
+    //     border: none;
+    //     z-index: 200;
+    //     cursor: pointer;
+
+
+    //     // &:hover {
+    //     //     cursor: pointer;
+    //     // }
+
+    //     // &-icon {
+    //     //     @include switch-icon;
+    //     // }
+    //     span {
+    //         position: absolute;
+    //         top: 50%;
+    //         left: 50%;
+    //         transform: translate(-50%, -50%);
+    //         display: block;
+    //         width: 30px;
+    //         height: 2px;
+    //         background-color: $primary-light;
+    //     }
+
+    //     span:nth-child(1) {
+    //         transform: translate(-50%, -50%) translateY(-9px);
+    //         transition: .2s;
+    //     }
+
+    //     span:nth-child(4) {
+    //         transform: translate(-50%, -50%) translateY(9px);
+    //         transition: .2s;
+    //     }
+
+    //     &:hover span:nth-child(1) {
+    //         transform: translate(-50%, -50%) translateY(-13px);
+    //         opacity: 0;
+    //     }
+
+    //     &:hover span:nth-child(4) {
+    //         transform: translate(-50%, -50%) translateY(13px);
+    //         opacity: 0;
+    //     }
+
+    //     &:hover span:nth-child(2) {
+    //         transform: translate(-50%, -50%) rotate(45deg);
+    //         transition-delay: .2s;
+    //     }
+
+    //     &:hover span:nth-child(3) {
+    //         transform: translate(-50%, -50%) rotate(-45deg);
+    //         transition-delay: .2s;
+    //     }
+
+    // }
+
+    &__wrap {
+        position: relative;
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        background-color: $primary-dark;
+        transform: translateX(100%);
+        transition: .3s cubic-bezier(0.65, 0.05, 0.36, 1);
+        z-index: 100;
+
+        @include breakpoint(medium) {
+            right: 0;
+            width: 25%;
+        }
+
+        &--active {
+            transform: translateX(0);
+        }
+    }
+
+    &__item {
+        font-size: 2.5rem;
+        margin: 20px;
+        color: $primary-light;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: transform .3s;
+
+        @include breakpoint(medium) {
+            margin: 10px;
+            font-size: 1.5rem;
+        }
+
+        @include breakpoint(large) {
+            margin: 20px;
+            font-size: 2rem;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &--mobile {
+            @include breakpoint(medium) {
+                display: none;
+            }
+        }
+
+        &--desktop {
+            display: none;
+
+            @include breakpoint(medium) {
+                display: block;
+            }
+        }
+    }
+
+    &__socials {
+        position: absolute;
+        bottom: 50px;
+
+        &-item {
+            @include social-icon;
+        }
+
+    }
+}
+
+@include button-animation;

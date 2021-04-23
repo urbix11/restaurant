@@ -1,0 +1,24 @@
+.footer {
+    background-color: $primary-dark;
+    color: $primary-light;
+    padding: 60px 20px;
+
+    &__socials {
+        text-align: center;
+        margin-bottom: 40px;
+
+        &-item {
+            @include social-icon;
+        }
+    }
+
+    &__text {
+        color: $light-gray;
+        font-size: 0.7rem;
+        text-align: center;
+
+        @include breakpoint(medium) {
+            font-size: 1rem;
+        }
+    }
+}

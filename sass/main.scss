@@ -1,0 +1,17 @@
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+@import 'typography';
+@import 'base';
+@import 'header';
+@import 'header-desktop';
+@import 'nav';
+@import 'menu';
+@import 'dishes';
+@import 'about';
+@import 'contact';
+@import 'footer';
+
+
+//problem z połażceniem plików js (mneu jest napisane zamiast wykoanne przed webpack + problem przy odświeżaniu)
+//animacje

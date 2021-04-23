@@ -1,0 +1,127 @@
+.dishes {
+    display: flex;
+    justify-content: center;
+
+    &__wrap {
+        margin: 40px 20px 0 20px;
+
+        @include breakpoint(xsmall) {
+            margin: 60px 40px 0 40px;
+        }
+
+        @include breakpoint(small) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 0 60px;
+        }
+
+        @include breakpoint(medium) {
+            max-width: 1200px;
+            margin: 100px 50px 0 50px;
+            gap: 0 80px;
+        }
+
+        @include breakpoint(large) {
+            gap: 0 100px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        @include breakpoint(xsmall) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__image {
+        width: 35%;
+
+        &-img {
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 8px;
+        }
+    }
+
+    &__text {
+        position: relative;
+        width: 60%;
+    }
+
+    &__title {
+        font-size: 1.3rem;
+        font-weight: 700;
+
+        @include breakpoint(xsmall) {
+            font-size: 1.5rem;
+        }
+
+        @include breakpoint(small) {
+            font-size: 1.3rem;
+        }
+
+        @include breakpoint(medium) {
+            font-size: 1.5rem;
+        }
+
+        @include breakpoint(large) {
+            font-size: 1.8rem;
+        }
+
+
+    }
+
+    &__description {
+        margin: 5px 5px 0 0;
+        font-size: 0.8rem;
+        line-height: 115%;
+
+        @include breakpoint(xsmall) {
+            font-size: 1.1rem;
+        }
+
+        @include breakpoint(small) {
+            font-size: 0.9rem;
+        }
+
+        @include breakpoint(medium) {
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        @include breakpoint(large) {
+            font-size: 1.3rem;
+        }
+    }
+
+    &__price {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-size: 1.3rem;
+        font-weight: 700;
+
+        @include breakpoint(xsmall) {
+            font-size: 1.5rem;
+        }
+
+        @include breakpoint(small) {
+            font-size: 1.3rem;
+        }
+
+        @include breakpoint(medium) {
+            font-size: 1.5rem;
+        }
+
+        @include breakpoint(large) {
+            font-size: 1.8rem;
+        }
+    }
+
+
+}

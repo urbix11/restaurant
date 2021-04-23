@@ -1,0 +1,169 @@
+@mixin breakpoint($point) {
+    @if $point==xsmall {
+        @media screen and(min-width: 500px) {
+            @content;
+        }
+    }
+
+    @else if $point==small {
+        @media screen and(min-width: 768px) {
+            @content;
+        }
+    }
+
+    @else if $point==medium {
+        @media screen and(min-width: 1024px) {
+            @content;
+        }
+    }
+
+    @else if $point==large {
+        @media screen and(min-width: 1440px) {
+            @content;
+        }
+    }
+
+    @else if $point==xlarge {
+        @media screen and(min-width: 1920px) {
+            @content;
+        }
+    }
+}
+
+@mixin section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+
+    @include breakpoint(xsmall) {
+        font-size: 4rem;
+    }
+
+    @include breakpoint(small) {
+        font-size: 6rem;
+    }
+
+    @include breakpoint(large) {
+        font-size: 8rem;
+    }
+}
+
+@mixin section-line {
+    width: 80%;
+    height: 2px;
+    margin: 10px auto;
+
+    @include breakpoint(medium) {
+        margin: 20px auto;
+    }
+
+    @include breakpoint(large) {
+        width: 1200px;
+    }
+}
+
+@mixin button-animation {
+    .nav__btn {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        padding: 20px;
+        margin-left: auto;
+        background: transparent;
+        outline: none;
+        border: none;
+        z-index: 200;
+        cursor: pointer;
+    }
+
+    .nav__btn span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        width: 30px;
+        height: 2px;
+        background-color: $primary-light;
+    }
+
+    .nav__btn.dark span {
+        background-color: $primary-dark;
+    }
+
+    .nav__btn.white span {
+        background-color: $primary-light;
+    }
+
+    .nav__btn span:nth-child(1) {
+        transform: translate(-50%, -50%) translateY(-9px);
+        transition: .2s;
+    }
+
+    .nav__btn span:nth-child(4) {
+        transform: translate(-50%, -50%) translateY(9px);
+        transition: .2s;
+    }
+
+    .nav__btn.active span:nth-child(1) {
+        transform: translate(-50%, -50%) translateY(-13px);
+        opacity: 0;
+    }
+
+    .nav__btn.active span:nth-child(4) {
+        transform: translate(-50%, -50%) translateY(13px);
+        opacity: 0;
+    }
+
+    .nav__btn.active span:nth-child(2) {
+        transform: translate(-50%, -50%) rotate(45deg);
+        transition-delay: .2s;
+    }
+
+    .nav__btn.active span:nth-child(3) {
+        transform: translate(-50%, -50%) rotate(-45deg);
+        transition-delay: .2s;
+    }
+}
+
+@mixin switch-icon {
+    &--mobile {
+        @include breakpoint(medium) {
+            display: none;
+        }
+    }
+
+    &--desktop {
+        display: none;
+
+        @include breakpoint(medium) {
+            display: block;
+        }
+    }
+}
+
+@mixin social-icon {
+    margin: 10px;
+    transition: transform .2s ease-in-out;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+}
+
+
+@mixin contact-form {
+    margin-bottom: 20px;
+    padding: 5px 0;
+    border: none;
+    border-bottom: 1px solid $primary-dark;
+    font-size: 1.2rem;
+
+    &:focus {
+        outline: none;
+        border-bottom: 2px solid $primary-dark;
+
+    }
+}

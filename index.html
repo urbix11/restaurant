@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakfast</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <a href="#header">
+            <img class="nav__logo nav__logo--mobile" src="../src/assets/icons/coffee.svg" alt="">
+        </a>
+        <a href="#header-desktop">
+            <img class="nav__logo nav__logo--desktop" src="../src/assets/icons/coffee.svg" alt=""></a>
+
+        <button class="nav__btn">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav__wrap">
+            <a href="#header" class="nav__item nav__item--mobile">Home</a>
+            <a href="#header-desktop" class="nav__item nav__item--desktop">Home</a>
+            <a href="#menu" class="nav__item">Menu</a>
+            <a href="#about" class="nav__item">About us</a>
+            <a href="#contact" class="nav__item">Contact</a>
+
+            <div class="nav__socials">
+                <a href="https://www.facebook.com/" target="_blank"><img src="../src/assets/icons/facebook.svg" alt="" class="nav__socials-item"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="../src/assets/icons/instagram.svg" alt="" class="nav__socials-item"></a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header section" id="header">
+
+        <div class="header__bg-color">
+            <div class="header__heading">
+                <p class="header__subtitle">The perfect breakfast doesn't exist... </p>
+                <h1 class="header__title"><span class="header__title-stroke">break</span>fast</h1>
+            </div>
+        </div>
+
+        <div class="header__bg-image">
+            <img class="header__arrow" src="../src/assets/icons/arrow-down.svg" alt="">
+        </div>
+    </header>
+
+    <header class="header-desktop" id="header-desktop">
+
+        <div class="header-desktop__bg-color">
+
+            <div class="header-desktop__heading">
+                <h1 class="header-desktop__title" data-aos="fade-right" data-aos-duration="800">break</h1>
+                <p class="header-desktop__subtitle">The perfect breakfast doesn't exist... </p>
+            </div>
+
+            <div class="header-desktop__arrow">
+                <a href="#menu" class="header-desktop__arrow-link"><img src="../src/assets/icons/arrow-down-desktop.svg" alt="">menu</a>
+            </div>
+
+            <div class="header-desktop__socials">
+                <a href="https://www.facebook.com/" target="_blank" class="header-desktop__socials-item link">Facebook</a>
+                <a href="https://www.instagram.com/" target="_blank" class="header-desktop__socials-item link">Instagram</a>
+            </div>
+        </div>
+
+        <div class="header-desktop__bg-image">
+
+            <div class="header-desktop__heading-right">
+                <h1 class="header-desktop__heading-right-title" data-aos="fade-left" data-aos-duration="800">fast</h1>
+            </div>
+
+        </div>
+
+        <div class="header-desktop__flyout-image"></div>
+    </header>
+    <div class="shadow"></div>
+
+    <section class="menu section white-section" id="menu">
+        <div class="menu__heading">
+            <h2 class="menu__title">menu</h2>
+            <p class="menu__subtitle">Choose your perfect breakfast</p>
+        </div>
+
+        <div class="menu__menu">
+            <a href="#sweet">
+                <button onclick="showDishes('sweet')" class="menu__btn">
+                    <div class="menu__tile">
+                        <img src="../src/assets/images/sweet.jpg" alt="Sweet breakfast" class="menu__tile-image">
+                        <h3 data-id="sweet" class="menu__tile-title--active">Sweet</h3>
+                        <h3 data-id-hover="sweet" class="menu__tile-title--hover" style="display: none;">Sweet</h3>
+                    </div>  
+                </button>
+            </a>
+
+            <a href="#savory">
+                <button class="menu__btn" onclick="showDishes('savory')">
+                    <div class="menu__tile">
+                        <img src="../src/assets/images/savory.jpg" alt="Savory breakfast" class="menu__tile-image">
+                        <h3 data-id="savory" class="menu__tile-title">Savory</h3>
+                        <h3 data-id-hover="savory" class="menu__tile-title--hover">Savory</h3>
+                    </div>
+                </button>
+            </a>
+
+            <a href="#cakes">
+                <button class="menu__btn" onclick="showDishes('cakes')">
+                    <div class="menu__tile">
+                        <img src="../src/assets/images/cakes.jpg" alt="Cookies" class="menu__tile-image">
+                            <h3 data-id="cakes" class="menu__tile-title">Cakes</h3>
+                    <h3 data-id-hover="cakes" class="menu__tile-title--hover">Cakes</h3>
+                    </div>
+                </button>
+            </a>
+
+            <a href="#drinks">
+                <button class="menu__btn" onclick="showDishes('drinks')">
+                    <div class="menu__tile">
+                        <img src="../src/assets/images/drinks.jpg" alt="Drinks" class="menu__tile-image">
+                        <h3 data-id="drinks" class="menu__tile-title">Drinks</h3>
+                        <h3 data-id-hover="drinks" class="menu__tile-title--hover">Drinks</h3>
+                    </div>
+                </button>
+            </a>
+        </div>
+
+        <div class="dishes" id="sweet">
+            <div class="dishes__wrap">
+
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu_sweet1.jpg" alt="Pancakes" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">Blueberry magic</h4>
+                        <p class="dishes__description">Pancakes with blueberries and butter. Topped with maple syrup.</p>
+                        <span class="dishes__price">7$</span>
+                    </div>
+                </div>
+
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu_sweet1.jpg" alt="Pancakes" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">Blueberry magic</h4>
+                        <p class="dishes__description">Pancakes with blueberries and butter. Topped with maple syrup.</p>
+                        <span class="dishes__price">7$</span>
+                    </div>
+                </div>
+
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu_sweet1.jpg" alt="Pancakes" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">Blueberry magic</h4>
+                        <p class="dishes__description">Pancakes with blueberries and butter. Topped with maple syrup.</p>
+                        <span class="dishes__price">7$</span>
+                    </div>
+                </div>
+
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu_sweet1.jpg" alt="Pancakes" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">Blueberry magic</h4>
+                        <p class="dishes__description">Pancakes with blueberries and butter. Topped with maple syrup.</p>
+                        <span class="dishes__price">7$</span>
+                    </div>
+                </div>
+
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu_sweet1.jpg" alt="Pancakes" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">Blueberry magic</h4>
+                        <p class="dishes__description">Pancakes with blueberries and butter. Topped with maple syrup.</p>
+                        <span class="dishes__price">7$</span>
+                    </div>
+                </div>
+
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu_sweet1.jpg" alt="Pancakes" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">Blueberry magic</h4>
+                        <p class="dishes__description">Pancakes with blueberries and butter. Topped with maple syrup.</p>
+                        <span class="dishes__price">7$</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dishes" id="savory" style="display: none;">
+            <div class="dishes__wrap">
+
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu_savory1.jpg" alt="Toast" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">King toast</h4>
+                        <p class="dishes__description">Crispy toast with ham, cheese and lettuce.</p>
+                        <span class="dishes__price">4$</span>
+                    </div>
+                </div>
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu_savory1.jpg" alt="Toast" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">King toast</h4>
+                        <p class="dishes__description">Crispy toast with ham, cheese and lettuce.</p>
+                        <span class="dishes__price">4$</span>
+                    </div>
+                </div>
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu_savory1.jpg" alt="Toast" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">King toast</h4>
+                        <p class="dishes__description">Crispy toast with ham, cheese and lettuce.</p>
+                        <span class="dishes__price">4$</span>
+                    </div>
+                </div>
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu_savory1.jpg" alt="Toast" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">King toast</h4>
+                        <p class="dishes__description">Crispy toast with ham, cheese and lettuce.</p>
+                        <span class="dishes__price">4$</span>
+                    </div>
+                </div>
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu_savory1.jpg" alt="Toast" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">King toast</h4>
+                        <p class="dishes__description">Crispy toast with ham, cheese and lettuce.</p>
+                        <span class="dishes__price">4$</span>
+                    </div>
+                </div>
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu_savory1.jpg" alt="Toast" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">King toast</h4>
+                        <p class="dishes__description">Crispy toast with ham, cheese and lettuce.</p>
+                        <span class="dishes__price">4$</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dishes" id="cakes" style="display: none;">
+            <div class="dishes__wrap">
+
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu_cakes1.jpg" alt="Cheesecake" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">Cheesecake</h4>
+                        <p class="dishes__description">Sprinkled with chocolate shavings and topped with caramel sauce.</p>
+                        <span class="dishes__price">2$</span>
+                    </div>
+                </div>
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu_cakes1.jpg" alt="Cheesecake" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">Cheesecake</h4>
+                        <p class="dishes__description">Sprinkled with chocolate shavings and topped with caramel sauce.</p>
+                        <span class="dishes__price">2$</span>
+                    </div>
+                </div>
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu_cakes1.jpg" alt="Cheesecake" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">Cheesecake</h4>
+                        <p class="dishes__description">Sprinkled with chocolate shavings and topped with caramel sauce.</p>
+                        <span class="dishes__price">2$</span>
+                    </div>
+                </div>
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu_cakes1.jpg" alt="Cheesecake" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">Cheesecake</h4>
+                        <p class="dishes__description">Sprinkled with chocolate shavings and topped with caramel sauce.</p>
+                        <span class="dishes__price">2$</span>
+                    </div>
+                </div>
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu_cakes1.jpg" alt="Cheesecake" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">Cheesecake</h4>
+                        <p class="dishes__description">Sprinkled with chocolate shavings and topped with caramel sauce.</p>
+                        <span class="dishes__price">2$</span>
+                    </div>
+                </div>
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu_cakes1.jpg" alt="Cheesecake" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">Cheesecake</h4>
+                        <p class="dishes__description">Sprinkled with chocolate shavings and topped with caramel sauce.</p>
+                        <span class="dishes__price">2$</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="dishes" id="drinks" style="display: none;">
+            <div class="dishes__wrap">
+
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu__drinks.jpg" alt="Latte" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">Caffè latte</h4>
+                        <p class="dishes__description">Espresso with the addition of frothed milk.</p>
+                        <span class="dishes__price">3$</span>
+                    </div>
+                </div>
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu__drinks.jpg" alt="Latte" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">Caffè latte</h4>
+                        <p class="dishes__description">Espresso with the addition of frothed milk.</p>
+                        <span class="dishes__price">3$</span>
+                    </div>
+                </div>
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu__drinks.jpg" alt="Latte" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">Caffè latte</h4>
+                        <p class="dishes__description">Espresso with the addition of frothed milk.</p>
+                        <span class="dishes__price">3$</span>
+                    </div>
+                </div>
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu__drinks.jpg" alt="Latte" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">Caffè latte</h4>
+                        <p class="dishes__description">Espresso with the addition of frothed milk.</p>
+                        <span class="dishes__price">3$</span>
+                    </div>
+                </div>
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu__drinks.jpg" alt="Latte" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">Caffè latte</h4>
+                        <p class="dishes__description">Espresso with the addition of frothed milk.</p>
+                        <span class="dishes__price">3$</span>
+                    </div>
+                </div>
+                <div class="dishes__item">
+                    <div class="dishes__image">
+                        <img src="../src/assets/images/menu__drinks.jpg" alt="Latte" class="dishes__image-img">
+                    </div>
+                    <div class="dishes__text">
+                        <h4 class="dishes__title">Caffè latte</h4>
+                        <p class="dishes__description">Espresso with the addition of frothed milk.</p>
+                        <span class="dishes__price">3$</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about section" id="about">
+        <h2 class="about__title">About us</h2>
+        <div class="about__line"></div>
+
+        <div class="about__wrap">
+            <div class="about__item">
+                <div class="about__text">
+                    <h3 class="about__text-title">Food of the highest quality</h3>
+                    <div class="about__text-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros, cursus parturient aenean iaculis. Gravida fringilla amet a in sit vel. Auctor porta gravida faucibus egestas. Amet, quis turpis volutpat sagittis, ut.</div>
+                </div>
+                <div class="about__image">
+                    <img src="../src/assets/images/about1.jpg" alt="Meal" class="about__image-item" data-aos="fade-left" data-aos-duration="500">
+                </div>
+            </div>
+
+            <div class="about__item">
+                <div class="about__text">
+                    <h3 class="about__text-title">We make everything from scratch</h3>
+                    <div class="about__text-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros, cursus parturient aenean iaculis. Gravida fringilla amet a in sit vel. Auctor porta gravida faucibus egestas. Amet, quis turpis volutpat sagittis, ut.</div>
+                </div>
+                <div class="about__image about__image--left">
+                    <img src="../src/assets/images/about2.jpg" alt="Restaurant" class="about__image-item" data-aos="fade-right" data-aos-duration="500" data-aos-delay="200">
+                </div>
+            </div>
+
+            <div class="about__item">
+                <div class="about__text">
+                    <h3 class="about__text-title">You will remember us for a long time</h3>
+                    <div class="about__text-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros, cursus parturient aenean iaculis. Gravida fringilla amet a in sit vel. Auctor porta gravida faucibus egestas. Amet, quis turpis volutpat sagittis, ut.</div>
+                </div>
+                <div class="about__image">
+                    <img src="../src/assets/images/about3.jpg" alt="Breakfast" class="about__image-item" data-aos="fade-left" data-aos-duration="500" data-aos-delay="400">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact section white-section" id="contact">
+        <h2 class="contact__title">contact</h2>
+        <div class="contact__line"></div>
+
+        <div class="contact__address">
+            <div class="contact__info" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800">
+                <div class="contact__item">
+                    <h5 class="contact__item-title">address</h5>
+                    <p class="contact__item-text">64 Baker Way</p>
+                    <p class="contact__item-text">London, E1 7AD</p>
+                </div>
+                <div class="contact__item">
+                    <h5 class="contact__item-title">opening hours</h5>
+                    <p class="contact__item-text">Mon-Fri 7:00AM - 3:00PM</p>
+                    <p class="contact__item-text">Sat-Sun 8:00AM - 3:00PM</p>
+                </div>
+                <div class="contact__item">
+                    <h5 class="contact__item-title">phone number</h5>
+                    <p class="contact__item-text">
+                        <a href="tel:763-921-764" class="contact__item-link">763-921-764</a>
+                    </p>
+                </div>
+                <div class="contact__item">
+                    <h5 class="contact__item-title">E-mail</h5>
+                    <p class="contact__item-text">
+                        <a href="mailto:breakfastcafe@gmail.com" class="contact__item-link">breakfastcafe@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="contact__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28105.1899002427!2d-0.12854660805813808!3d51.49172399860022!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondyn%2C%20Wielka%20Brytania!5e0!3m2!1spl!2spl!4v1618471172092!5m2!1spl!2spl"
+                    allowfullscreen="" loading="lazy" class="contact__map-item"></iframe>
+            </div>
+        </div>
+
+        <div class="contact__contact">
+            <div class="contact__text" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800">
+                <h3 class="contact__text-title">If you have a suggestion or complaint, write to us</h3>
+                <p class="contact__text-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eros, cursus parturient aenean iaculis. </p>
+            </div>
+            <div class="contact__form-wrap">
+                <form class="contact__form">
+                    <label for="name" class="contact__form-label">name</label>
+                    <input type="text" class="contact__form-input" id="name">
+
+                    <label for="email" class="contact__form-label">E-MAIL</label>
+                    <input type="text" class="contact__form-input" id="email">
+
+                    <label for="msg" class="contact__form-label">Message</label>
+                    <textarea id="msg" class="contact__form-textarea"></textarea>
+
+                    <button type="submit" class="contact__form-btn">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__socials">
+            <a href="https://www.facebook.com/" target="_blank"><img src="../src/assets/icons/facebook.svg" alt="" class="footer__socials-item"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="../src/assets/icons/instagram.svg" alt="" class="footer__socials-item"></a>
+        </div>
+
+        <div class="footer__text">
+            <p class="footer__text-item">Copyright © 2021 Breakfast. All Rights Reserved.</p>
+        </div>
+
+    </footer>
+
+    <script src="scripts/menu.js"></script>
+    <script src="scripts/nav.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

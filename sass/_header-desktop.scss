@@ -1,0 +1,121 @@
+.header-desktop {
+    display: none;
+}
+
+@include breakpoint(medium) {
+    .header-desktop {
+        position: relative;
+        display: flex;
+        height: 100vh;
+
+        //COLOR LEFT
+
+        &__bg-color {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            background-color: $primary-dark;
+        }
+
+        &__heading {
+            position: absolute;
+            top: 30%;
+            right: 0;
+        }
+
+        &__title {
+            color: rgba(255, 255, 255, 0);
+            font-size: 7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            -webkit-text-stroke: 1px $primary-light;
+
+            @include breakpoint(large) {
+                font-size: 8rem;
+            }
+        }
+
+        &__subtitle {
+            color: $primary-light;
+            text-align: center;
+            font-size: 1.2rem;
+
+            @include breakpoint(large) {
+                font-size: 1.4rem;
+
+            }
+        }
+
+        &__arrow {
+            position: absolute;
+            left: 7%;
+            bottom: 5%;
+
+            &-link {
+                color: $primary-light;
+                font-size: 1.7rem;
+                font-weight: 500;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                text-decoration: none;
+
+                img {
+                    margin-bottom: -7px;
+                }
+            }
+        }
+
+        &__socials {
+            position: absolute;
+            right: -175px;
+            bottom: 20px;
+            transform: rotate(-90deg);
+            transform-origin: left;
+
+            &-item {
+                position: relative;
+                margin-right: 20px;
+                color: $primary-light;
+                letter-spacing: 1px;
+                text-decoration: none;
+                transition: .3s;
+            }
+        }
+
+        //IMAGE RIGHT
+
+        &__bg-image {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            background-image: url('../assets/images/heroimg-d.jpg');
+            background-position: center;
+            background-size: cover;
+            z-index: -1;
+
+            @include breakpoint(xlarge) {
+                background-image: url('../assets/images/heroimg-xl.jpg');
+            }
+        }
+
+        &__heading-right {
+            position: absolute;
+            top: 30%;
+
+            &-title {
+                color: $primary-light;
+                font-size: 7rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                -webkit-text-stroke: 1px $primary-light;
+
+                @include breakpoint(large) {
+                    font-size: 8rem;
+                }
+
+            }
+        }
+    }
+}
