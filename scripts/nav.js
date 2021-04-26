@@ -72,7 +72,7 @@ const changeIconColor = () => {
     allSections.forEach(section => {
 
         if (section.classList.contains('white-section') && section.offsetTop <= currentSection + 20) {
-            navLogoIcon.src = "../src/assets/icons/coffee-dark.svg"
+            navLogoIcon.src = "../assets/icons/coffee-dark.svg"
             if (navBtn.classList.contains('active')) {
                 navBtn.classList.remove('dark')
             } else {
@@ -80,7 +80,7 @@ const changeIconColor = () => {
             }
 
         } else if (!section.classList.contains('white-section') && section.offsetTop <= currentSection + 20) {
-            navLogoIcon.src = "../src/assets/icons/coffee.svg"
+            navLogoIcon.src = "../assets/icons/coffee.svg"
             navBtn.classList.remove('dark')
         }
     })
