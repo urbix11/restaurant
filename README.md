@@ -15,5 +15,5 @@ Simple website of fictional restaurant.
 ## Demo
 
 https://urbix11.github.io/restaurant/
-![GitHub Logo](assets/images/website.png)
+![GitHub Logo](./assets/images/website.png)
 
